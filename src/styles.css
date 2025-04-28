@@ -1,0 +1,486 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  a {
+    color: #00a37f;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Layout */
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 2rem 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header & Footer */
+  .main-header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .logo-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00a37f;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .main-footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .footer-container a {
+    color: #a7f3d0;
+  }
+  
+  /* Home page */
+  .home-container {
+    margin-bottom: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00a37f;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #00a37f;
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  
+  .cta-button:hover {
+    background-color: #008c6c;
+    text-decoration: none;
+  }
+  
+  .teams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .team-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .progress-bar {
+    height: 10px;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0.75rem 0;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #00a37f;
+  }
+  
+  .view-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #00a37f;
+    color: white;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+  
+  .view-button:hover {
+    background-color: #008c6c;
+    text-decoration: none;
+  }
+  
+  /* Forms */
+  .create-team-container h1,
+  .team-header h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00a37f;
+  }
+  
+  .create-team-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .form-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .member-input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1rem;
+  }
+  
+  .remove-member-button {
+    background-color: #f3f4f6;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.75rem;
+  }
+  
+  .add-member-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f3f4f6;
+    color: #00a37f;
+    border: 1px dashed #00a37f;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #00a37f;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: #008c6c;
+  }
+  
+  .error-message {
+    padding: 1rem;
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Team Page */
+  .team-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .team-progress,
+  .team-members,
+  .team-organizer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .amount-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00a37f;
+    text-align: center;
+  }
+  
+  .amount-label {
+    display: block;
+    color: #666;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+  
+  .progress-percentage {
+    text-align: center;
+    font-weight: 600;
+    color: #00a37f;
+    margin-top: 0.5rem;
+  }
+  
+  .members-table {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    background-color: #f9f9f9;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .donate-button {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    background-color: #00a37f;
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .donate-button:hover {
+    background-color: #008c6c;
+    text-decoration: none;
+  }
+  
+  /* Donation Page */
+  .donation-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1.5rem;
+  }
+  
+  .donation-form,
+  .team-info {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .amount-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .amount-button {
+    padding: 0.75rem 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .amount-button.selected {
+    background-color: #00a37f;
+    color: white;
+    border-color: #00a37f;
+  }
+  
+  .donate-button-section {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  .donate-button-container a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #00a37f;
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-radius: 4px;
+  }
+  
+  .donation-complete {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .success-message {
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .success-message h2 {
+    font-size: 1.75rem;
+    color: #00a37f;
+    margin-bottom: 1rem;
+  }
+  
+  .donation-details {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    text-align: left;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .primary-button {
+    background-color: #00a37f;
+    color: white;
+  }
+  
+  .secondary-button {
+    background-color: #f3f4f6;
+    color: #666;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .team-content,
+    .donation-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .member-input-row {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .remove-member-button {
+      grid-column: span 2;
+    }
+    
+    .table-header,
+    .table-row {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .member-email-col {
+      display: none;
+    }
+    
+    .amount-buttons {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .member-input-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .amount-buttons {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .action-buttons {
+      flex-direction: column;
+    }
+  }
