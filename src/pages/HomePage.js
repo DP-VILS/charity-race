@@ -8,8 +8,8 @@ const HomePage = () => {
   
   return (
     <div className="home-container">
-      <section className="hero">
-        <div className="hero-content">
+      <section className="racer">
+        <div className="racer-content">
           <h1>Charity Race</h1>
           <p>Create teams to raise money for your favorite charities!</p>
           <Link to="/create-team" className="cta-button">
